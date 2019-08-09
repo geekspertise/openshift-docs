@@ -83,3 +83,74 @@ $ oc new-project istio-system
 $ oc apply -n istio-operator -f https://raw.githubusercontent.com/Maistra/istio-operator/maistra-0.12/deploy/servicemesh-operator.yaml
 ----
 
+= Installing the Operators using OperatorHub Web UI
+
+Jaeger and Kiali operators must be installed before the {ProductShortName} operator. 
+
+== Installing the Jaeger Operator
+You must install the Jaeger Operator for the {ProductName} Operator to install the control plane.
+
+.Prerequisites
+* Access to an OpenShift Container Platform cluster using an account with cluster-admin permissions.
+
+.Procedure
+* Navigate in the web console to the Catalog → OperatorHub page.
+
+* Scroll or type "Jaeger" into the Filter to find the Jaeger Operator.
+
+* Select the Operator. If you pick a Community Operator, you are warned that Red Hat does not certify those Operators. You must acknowledge that warning before continuing. Information about the Operator is displayed.
+
+* Click Install.
+
+* On the Create Operator Subscription page:
+ * Select "All namespaces on the cluster (default)". This installs the Operator in the default openshift-operators namespace to watch and be made available to all namespaces in the cluster.
+ * Select Automatic or Manual approval strategy.
+
+* From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
+
+== Installing the Kiali Operator
+You must install the Kiali Operator for the {ProductName} Operator to install the control plane.
+
+.Prerequisites
+
+* Access to an OpenShift Container Platform cluster using an account with cluster-admin permissions.
+
+.Procedure
+
+* Navigate in the web console to the Catalog → OperatorHub page.
+
+* Scroll or type "Kiali" into the Filter to find the Kiali Operator.
+
+* Select the Operator.
+
+* Click Install.
+
+* On the Create Operator Subscription page:
+ * Select "All namespaces on the cluster (default)". This installs the Operator in the default openshift-operators namespace to watch and be made available to all namespaces in the cluster.
+ * Select Automatic or Manual approval strategy.
+ 
+* From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
+
+== Installing the {ProductName} Operator
+
+* Access to an OpenShift Container Platform cluster using an account with cluster-admin permissions.
+
+* The Jaeger Operator must be installed.
+
+* The Kiali Operator must be installed.
+
+.Procedure
+
+* Navigate in the web console to the Catalog → OperatorHub page.
+
+* Scroll or type "Service Mesh" into the Filter to find the {ProductName} Operator.
+
+* Select the Operator.
+
+* Click Install.
+
+* On the Create Operator Subscription page:
+ * Select Automatic or Manual approval strategy.
+ 
+* From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
+

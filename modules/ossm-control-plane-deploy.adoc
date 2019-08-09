@@ -46,3 +46,31 @@ $ oc create -n istio-system -f istio-installation.yaml
 ----
 $ oc get pods -n istio-system -w
 ----
+
+= Deploying the control plane using OperatorHub
+
+.Prerequisites
+
+* An account with maistra-admin access (needs to be confirmed).
+
+* The {ProductName} Operator must be installed.
+
+.Procedure
+
+* Create a new project in the OpenShift Container Platform web console for this procedure. This example uses a project called istio-system.
+
+* Navigate to the Catalogs → Installed Operators page.
+
+* On the Installed Operators page, click Copied, and then click the {ProductName} Operator to view more details and available actions:
+ * As shown under Provided APIs, this Operator makes available two resource types: one for a {ProductName} ControlPlane and the other one for a ServiceMeshMemberRoll.
+
+* Create a new {ProducName} control plane:
+ 
+ * In the "Istio Service Mesh Control Plane" box click "Create New"
+ 
+ * The next screen allows you to make any modifications to the minimal starting template of an ServiceMeshControlPlane object, such as the size of the cluster. Click Create to finalize. This triggers the Operator to start up the Pods, Services, and other components of the new {ProductName} control plane.
+
+* Click "Istio Service Mesh Control Plane" tab, then click on the name of the control plane that was just created
+
+* Click the Resources tab to see {ProductName} control plane resources created and configured automatically by the Operator.
+
