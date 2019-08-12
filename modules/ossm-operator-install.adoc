@@ -105,6 +105,7 @@ You must install the Jaeger Operator for the {ProductName} Operator to install t
 * On the Create Operator Subscription page:
  * Select "All namespaces on the cluster (default)". This installs the Operator in the default openshift-operators namespace to watch and be made available to all namespaces in the cluster.
  * Select Automatic or Manual approval strategy.
+ * Click Subscribe.
 
 * From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
 
@@ -128,10 +129,13 @@ You must install the Kiali Operator for the {ProductName} Operator to install th
 * On the Create Operator Subscription page:
  * Select "All namespaces on the cluster (default)". This installs the Operator in the default openshift-operators namespace to watch and be made available to all namespaces in the cluster.
  * Select Automatic or Manual approval strategy.
+ * Click Subscribe.
  
 * From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
 
 == Installing the {ProductName} Operator
+
+.Prerequisites
 
 * Access to an OpenShift Container Platform cluster using an account with cluster-admin permissions.
 
@@ -151,6 +155,7 @@ You must install the Kiali Operator for the {ProductName} Operator to install th
 
 * On the Create Operator Subscription page:
  * Select Automatic or Manual approval strategy.
+ * Click Subscribe.
  
 * From the Catalog → Operator Management page, you can monitor an Operator Subscription’s installation and upgrade progress.
 
